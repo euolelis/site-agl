@@ -1,42 +1,141 @@
-<!-- ... (copie o <head> e o <header> do index.html) ... -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags para a página de Revenda -->
+    <title>Revenda de Seminovos | AGL Locadora de Veículos</title>
+    <meta name="description" content="Confira nosso estoque de caminhões seminovos. Veículos com procedência, revisados e com a qualidade AGL. Entre em contato para uma cotação.">
+
+    <!-- Favicon (o mesmo da home) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    
+    <!-- CSS e Bibliotecas (as mesmas da home) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
 <body>
-    <header>
-        <!-- O mesmo header para manter a consistência -->
+
+    <!-- O Header é exatamente o mesmo da página inicial -->
+    <header class="sticky">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html"><img src="images/logo-agl.png" alt="Logo AGL Locadora de Veículos" class="logo"></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#quem-somos">Quem Somos</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#frota">Frota</a></li>
+                    <li><a href="index.html#clientes">Clientes</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li class="nav-menu-button"><a href="revenda.html" class="btn-revenda active">Revenda de Seminovos</a></li>
+                </ul>
+                <a href="revenda.html" class="btn-revenda desktop-only active">Revenda de Seminovos</a>
+                <div class="hamburger">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="revenda-intro">
-            <h1>Revenda de Seminovos AGL</h1>
-            <p>Confira nossos veículos seminovos disponíveis. Qualidade e procedência garantida.</p>
-        </section>
-
-        <section id="veiculos-a-venda">
-            <div class="grid-veiculos">
-                <!-- Exemplo de um veículo -->
-                <div class="card-veiculo">
-                    <img src="images/caminhao-venda-1.jpg" alt="Modelo do Caminhão">
-                    <h3>VW Constellation 32.380</h3>
-                    <p>Ano: 2021 | Km: 150.000</p>
-                    <a href="#contato-revenda" class="btn-saiba-mais">Tenho Interesse</a>
-                </div>
-                <!-- Repetir .card-veiculo para cada caminhão -->
+        <!-- Seção 1: Banner da Página de Revenda -->
+        <section id="revenda-hero">
+            <div class="container">
+                <h1 data-aos="fade-up">Seminovos de Confiança</h1>
+                <p data-aos="fade-up" data-aos-delay="100">Veículos com procedência, revisados e com a qualidade que só a AGL oferece.</p>
             </div>
         </section>
 
-        <!-- Seção Contato para REVENDA -->
-        <section id="contato-revenda">
-            <h2>Fale com nosso time de Vendas</h2>
-            <p>Preencha o formulário abaixo para receber mais informações.</p>
-            <form id="form-revenda">
-                <!-- Campos similares ao outro formulário -->
-                <button type="submit">Enviar Contato de Venda</button>
-            </form>
+        <!-- Seção 2: Vitrine de Veículos -->
+        <section id="veiculos-a-venda" class="section-padding">
+            <div class="container">
+                <h2 data-aos="fade-up">Nosso Estoque</h2>
+                <div class="grid-veiculos">
+                    
+                    <!-- Exemplo de Card de Veículo 1 -->
+                    <div class="card-veiculo" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-imagem">
+                            <img src="images/seminovo-1.jpg" alt="VW Constellation 24.280 Branco">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>VW Constellation 24.280</h3>
+                            <ul class="card-specs">
+                                <li><strong>Ano:</strong> 2020/2021</li>
+                                <li><strong>KM:</strong> 150.000</li>
+                            </ul>
+                            <a href="#contato-revenda" class="btn-card">Tenho Interesse</a>
+                        </div>
+                    </div>
+
+                    <!-- Exemplo de Card de Veículo 2 -->
+                    <div class="card-veiculo" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-imagem">
+                            <img src="images/seminovo-2.jpg" alt="Mercedes-Benz Actros 2548 Amarelo">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>Mercedes-Benz Actros 2548</h3>
+                            <ul class="card-specs">
+                                <li><strong>Ano:</strong> 2021/2021</li>
+                                <li><strong>KM:</strong> 120.000</li>
+                            </ul>
+                            <a href="#contato-revenda" class="btn-card">Tenho Interesse</a>
+                        </div>
+                    </div>
+
+                    <!-- Exemplo de Card de Veículo 3 -->
+                    <div class="card-veiculo" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-imagem">
+                            <img src="images/seminovo-3.jpg" alt="VW Delivery 11.180 Branco">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>VW Delivery 11.180</h3>
+                            <ul class="card-specs">
+                                <li><strong>Ano:</strong> 2022/2022</li>
+                                <li><strong>KM:</strong> 85.000</li>
+                            </ul>
+                            <a href="#contato-revenda" class="btn-card">Tenho Interesse</a>
+                        </div>
+                    </div>
+
+                    <!-- Adicione mais cards aqui conforme o estoque -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Formulário de Contato para VENDAS -->
+        <section id="contato-revenda" class="section-padding bg-light">
+            <div class="container" data-aos="fade-up">
+                <h2>Fale com nosso time de Vendas</h2>
+                <p class="section-subtitle">Preencha o formulário para receber mais informações sobre nossos seminovos.</p>
+                <!-- IMPORTANTE: Use um NOVO endpoint do Formspree para este formulário -->
+                <form action="https://formspree.io/f/SEU_NOVO_CODIGO_DE_VENDAS" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="nome" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <textarea name="mensagem" placeholder="Tenho interesse no veículo..." rows="5" required></textarea>
+                    <button type="submit" class="btn-submit">Enviar Contato</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <!-- O mesmo footer -->
-    </footer>
+    <!-- O Footer é exatamente o mesmo da página inicial -->
+    <footer class="container">...</footer>
+
+    <!-- O botão do WhatsApp também pode ser incluído aqui -->
+    <a href="https://wa.me/..." class="whatsapp-float" target="_blank">...</a>
+
+    <!-- Scripts (o mesmo script.js da home funcionará aqui) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

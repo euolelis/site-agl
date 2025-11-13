@@ -76,3 +76,110 @@ h2{font-size:2rem;}
 .form-group{flex-direction:column;gap:20px;}
 .whatsapp-tooltip{display:none;}}
 @media (min-width:769px){.nav-menu-button{display:none;}}
+/* =============================================== */
+/* --- Estilos da Página de Revenda --- */
+/* =============================================== */
+
+/* --- Hero Banner da Revenda --- */
+#revenda-hero {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+#revenda-hero h1 {
+    color: var(--white);
+}
+
+#revenda-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 10px auto 0 auto;
+    opacity: 0.9;
+}
+
+/* --- Grid de Veículos --- */
+.grid-veiculos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card-veiculo {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-veiculo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 74, 124, 0.12);
+}
+
+.card-imagem {
+    overflow: hidden;
+    height: 220px;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-veiculo:hover .card-imagem img {
+    transform: scale(1.05);
+}
+
+.card-conteudo {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+.card-conteudo h3 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.card-specs {
+    list-style: none;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.card-specs li {
+    margin-bottom: 5px;
+}
+
+.btn-card {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto; /* Empurra o botão para o final do card */
+    transition: background-color 0.3s;
+}
+
+.btn-card:hover {
+    background-color: var(--dark-blue);
+}
+
+/* --- Destaque no botão do menu --- */
+.btn-revenda.active {
+    background-color: var(--dark-blue);
+    box-shadow: 0 0 0 2px var(--primary-blue);
+}
