@@ -37,6 +37,7 @@ header.sticky{position:sticky;top:0;}
 .service-icon{background-color:var(--primary-blue);width:70px;height:70px;border-radius:50%;margin:0 auto 20px auto;display:flex;justify-content:center;align-items:center;}
 .service-icon svg{width:32px;height:32px;stroke:var(--white);}
 .service-card h3{font-size:1.2rem;color:var(--dark-blue);font-weight:600;}
+.service-card .service-note {font-size: 0.85rem; color: var(--text-light); margin-top: 8px;}
 .frota-slider{width:100%;padding:20px 0 40px 0;}
 .swiper-slide{text-align:center;font-size:18px;background:#fff;display:flex;justify-content:center;align-items:center;}
 .swiper-slide img{display:block;width:100%;height:100%;object-fit:cover;border-radius:8px;}
@@ -182,4 +183,24 @@ h2{font-size:2rem;}
 .btn-revenda.active {
     background-color: var(--dark-blue);
     box-shadow: 0 0 0 2px var(--primary-blue);
+}
+.column-video {
+    flex: 1;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
