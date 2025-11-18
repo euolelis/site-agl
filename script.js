@@ -48,3 +48,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+
+    // Verifica se o usuário já aceitou os cookies
+    if (!localStorage.getItem('cookiesAccepted')) {
+        cookieBanner.classList.add('show');
+    }
+
+    // Evento de clique para aceitar os cookies
+    acceptCookiesButton.addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.classList.remove('show');
+    });
+});
