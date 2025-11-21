@@ -176,3 +176,46 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;}
     #cookie-banner {flex-direction: column;text-align: center;}
     .footer-legal {flex-direction: column;gap: 10px;}
 }
+/* --- ESTILOS PARA O CARROSSEL DENTRO DO CARD DE VEÍCULO --- */
+
+.card-veiculo .swiper {
+    width: 100%;
+    height: 220px; /* Altura fixa para as imagens */
+    position: relative;
+}
+
+.card-veiculo .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilização dos botões de navegação do carrossel */
+.card-veiculo .swiper-button-next,
+.card-veiculo .swiper-button-prev {
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.card-veiculo .swiper-button-next:hover,
+.card-veiculo .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-veiculo .swiper-button-next::after,
+.card-veiculo .swiper-button-prev::after {
+    font-size: 14px; /* Tamanho das setas */
+    font-weight: 900;
+}
+
+.card-veiculo .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.card-veiculo .swiper-pagination-bullet-active {
+    background-color: var(--white);
+}

@@ -64,3 +64,22 @@ document.addEventListener('DOMContentLoaded', function() {
         cookieBanner.classList.remove('show');
     });
 });
+// --- INICIALIZAÇÃO DOS CARROSSÉIS DOS CARDS DE SEMINOVOS ---
+// Esta função encontra todos os carrosséis na página e os inicializa individualmente.
+document.addEventListener('DOMContentLoaded', function() {
+    const cardSwipers = document.querySelectorAll('.card-swiper');
+    
+    cardSwipers.forEach(swiperEl => {
+        new Swiper(swiperEl, {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+});
